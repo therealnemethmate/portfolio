@@ -12,5 +12,5 @@ export default defineConfig({
             '@': path.resolve('./src'),
         },
     },
-    base: '/cv/',
+    base: '/portfolio/',
 });
