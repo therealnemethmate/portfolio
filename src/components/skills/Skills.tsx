@@ -19,6 +19,7 @@ import {
     SiApachekafka,
     SiAmazonaws,
     SiTypescript,
+    SiGo,
 } from 'react-icons/si';
 import { SkillsDetail } from './SkillsDetail';
 
@@ -30,7 +31,7 @@ const frontendSkills = [
     },
     {
         name: 'CSS3',
-        level: 'Intermediate',
+        level: 'Basics',
         children: <IoLogoCss3 fontSize="2rem" />,
     },
     {
@@ -100,6 +101,11 @@ const backendSkills = [
         name: 'S3, EC2, Lambda',
         level: 'Basics',
         children: <SiAmazonaws fontSize="2rem" />,
+    },
+    {
+        name: 'Go',
+        level: 'Basics',
+        children: <SiGo fontSize="2rem" />,
     },
 ];
 
