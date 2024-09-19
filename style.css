@@ -21,6 +21,21 @@ h1 {
     animation: fadeIn 1s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        font-size: 1em;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+}
+
 .profile-picture {
     width: 200px;
     height: 200px;
