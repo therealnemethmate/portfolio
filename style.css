@@ -140,11 +140,13 @@ footer {
 
 .divider {
     border-left: 2px dashed #cdd6f4;
+    border-right: 0;
     margin: 0 1em;
 }
 
 .horizontal-divider {
     border-top: 2px dashed #cdd6f4;
+    border-bottom: 0;
     margin: 1em 0;
 }
 
