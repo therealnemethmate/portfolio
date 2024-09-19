@@ -144,7 +144,7 @@ footer {
         text-decoration: none;
         padding: 0.5em 1em;
         display: block;
-        transition: color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
     }
 
     a:visited {
@@ -154,6 +154,15 @@ footer {
     a:hover {
         color: #f5a623;
     }
+}
+
+.download-btn {
+    background-color: #f5a623;
+    color: #1e1e2e;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
