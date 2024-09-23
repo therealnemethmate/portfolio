@@ -1,98 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Mate Nemeth</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>Mate Nemeth</h1>
-        <h2>Fullstack Web Developer</h2>
-    </header>
-    <main>
-        <section class="about">
-            <img src="assets/images/profile.png" alt="Profile Picture" class="profile-picture">
-            <section>
-                <h2>About Me</h2>
-                <p>I am Mate Nemeth, a fullstack web developer from Hungary. Mostly, I have experience with e-commerce integration projects, although I have some frontend development skills - building admin web apps for integration softwares / services.</p>
-                <p>My main interest is on backend development, but I also have experience with frontend technologies like React and Vue. I am always eager to learn new things and improve my skills.</p>
-            </section>
-        </section>
-        <section class="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Fullstack Developer</strong> at Oander Development Kft. (2022 - Present)</li>
-                <li><strong>Software Engineer</strong> at EPAM Systems (2021 - 2022)</li>
-                <li><strong>Software Developer</strong> at BCA Hungary Kft. (2018 - 2021)</li>
-                <li><strong>Junior Software Engineer</strong> at evosoft Hungary Kft. (2017 - 2018)</li>
-            </ul>
-            <h2>Skills</h2>
-            <section class="skills-row">
-                <article class="skills-column">
-                    <hr class="horizontal-divider">
-                    <h3>Frontend Development</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>Vue</li>
-                    </ul>
-                </article>
-                <hr class="divider">
-                <article class="skills-column">
-                    <hr class="horizontal-divider">
-                    <h3>Backend Development</h3>
-                    <ul>
-                        <li>NodeJS</li>
-                        <li>Typescript</li>
-                        <li>MongoDB</li>
-                        <li>Redis</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>RabbitMQ</li>
-                        <li>Apache Kafka</li>
-                        <li>S3, EC2, Lambda</li>
-                        <li>Go</li>
-                    </ul>
-                </article>
-            </section>
-            <h2>Pet projects</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/therealnemethmate/homeflix" target="_blank">Homeflix</a>
-                    - Self hosted media server with a web interface
-                </li>
-                <li>
-                    <a href="https://github.com/therealnemethmate/clash-of-babynames" target="_blank">Clash of Babynames</a>
-                    - A web app to choose a hungarian baby name for your child</li>
-                <li>
-                    <a href="https://github.com/therealnemethmate/fit-converter" target="_blank">Fit Converter</a>
-                    - A web app to convert .fit files, so that they can be used in Zwift to create custom workouts
-                </li>
-                <li>
-                    <a href="https://github.com/therealnemethmate/imdb-sync-tool" target="_blank">IMDb Sync Tool</a>
-                    - A simple Node.js application that synchronizes movie ratings from a JSON file to your IMDb account.
-                </li>
-            </ul>
-            <h2>Connect with me</h2>
-            <section class="connect-with-me">
-                <a href="https://github.com/therealnemethmate" target="_blank">
-                    GitHub
-                </a>
-                <a href="https://x.com/nemethmate" target="_blank">
-                    X
-                </a>
-                <a href="https://www.linkedin.com/in/matenemeth91/" target="_blank">
-                    LinkedIn
-                </a>
-            </section>
-            <button class="download-btn" onclick="window.open('assets/cv.pdf', '_blank')">Download CV</button>
-        </section>
-    </main>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-button close"></span>
+            <span class="terminal-button minimize"></span>
+            <span class="terminal-button maximize"></span>
+            <span class="terminal-title">mate_nemeth_cv.sh</span>
+        </div>
+        <div class="terminal-content">
+            <pre><code>
+$ ./display_profile.sh
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat profile.txt</span>
+<span class="output">
+Name: Mate Nemeth
+Role: Fullstack Web Developer
+Location: Hungary
+
+<img src="assets/images/profile.png" alt="Profile Picture" class="profile-picture">
+
+About:
+I am a fullstack web developer with expertise in e-commerce integration projects and admin web app development. My primary focus is on backend development, but I also have experience with frontend technologies like React and Vue. Always eager to learn and improve my skills.
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">ls experience/</span>
+<span class="output">
+Oander_Development_Kft.txt  EPAM_Systems.txt  BCA_Hungary_Kft.txt  evosoft_Hungary_Kft.txt
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat experience/*.txt</span>
+<span class="output">
+Fullstack Developer at Oander Development Kft. (2022 - Present)
+Software Engineer at EPAM Systems (2021 - 2022)
+Software Developer at BCA Hungary Kft. (2018 - 2021)
+Junior Software Engineer at evosoft Hungary Kft. (2017 - 2018)
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">tree skills/</span>
+<span class="output">
+skills/
+├── frontend/
+│   ├── HTML
+│   ├── CSS
+│   ├── JavaScript
+│   ├── React
+│   └── Vue
+└── backend/
+    ├── NodeJS
+    ├── Typescript
+    ├── MongoDB
+    ├── Redis
+    ├── Docker
+    ├── Kubernetes
+    ├── RabbitMQ
+    ├── Apache Kafka
+    ├── S3, EC2, Lambda
+    └── Go
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">ls projects/</span>
+<span class="output">
+homeflix  clash-of-babynames  fit-converter  imdb-sync-tool
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat projects/*</span>
+<span class="output">
+Homeflix - Self hosted media server with a web interface
+<a href="https://github.com/therealnemethmate/homeflix" target="_blank">https://github.com/therealnemethmate/homeflix</a>
+
+Clash of Babynames - A web app to choose a hungarian baby name for your child
+<a href="https://github.com/therealnemethmate/clash-of-babynames" target="_blank">https://github.com/therealnemethmate/clash-of-babynames</a>
+
+Fit Converter - A web app to convert .fit files for custom Zwift workouts
+<a href="https://github.com/therealnemethmate/fit-converter" target="_blank">https://github.com/therealnemethmate/fit-converter</a>
+
+IMDb Sync Tool - Node.js app to sync movie ratings from JSON to IMDb account
+<a href="https://github.com/therealnemethmate/imdb-sync-tool" target="_blank">https://github.com/therealnemethmate/imdb-sync-tool</a>
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat connect.txt</span>
+<span class="output">
+GitHub: <a href="https://github.com/therealnemethmate" target="_blank">https://github.com/therealnemethmate</a>
+X: <a href="https://x.com/nemethmate" target="_blank">https://x.com/nemethmate</a>
+LinkedIn: <a href="https://www.linkedin.com/in/matenemeth91/" target="_blank">https://www.linkedin.com/in/matenemeth91/</a>
+</span>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command">wget assets/cv.pdf</span>
+<span class="output">
+Downloading CV... 100% complete
+File saved as: cv.pdf
+</span>
+<button class="download-btn" onclick="window.open('assets/cv.pdf', '_blank')">Open CV</button>
+
+<span class="prompt">root@mate-nemeth:~$</span> <span class="command blink">_</span>
+            </code></pre>
+        </div>
+    </div>
 </body>
 </html>
