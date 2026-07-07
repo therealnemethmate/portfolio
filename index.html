@@ -1,121 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Mate Nemeth</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Mate Nemeth — senior full stack developer specialising in backend systems, integrations, and developer tooling.">
+    <meta name="theme-color" content="#0b0f14">
+    <title>Mate Nemeth — Senior Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="terminal">
-        <div class="terminal-header">
-            <span class="terminal-button close"></span>
-            <span class="terminal-button minimize"></span>
-            <span class="terminal-button maximize"></span>
-            <span class="terminal-title">mate_nemeth_cv.sh</span>
-        </div>
-        <div class="terminal-content">
-            <pre><code>
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat profile.txt</span>
-<span class="output">
-Name: Mate Nemeth
-Role: Senior Full Stack Developer
-Location: Hungary
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-<img src="assets/images/profile.png" alt="Profile Picture" class="profile-picture">
+    <div class="terminal" aria-label="Mate Nemeth portfolio terminal">
+        <header class="terminal-header">
+            <div class="window-controls" aria-hidden="true">
+                <span class="terminal-button close"></span>
+                <span class="terminal-button minimize"></span>
+                <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">
+                <span class="terminal-title__icon">⌁</span>
+                <span>mate@portfolio — zsh — 100×34</span>
+            </div>
+            <div class="terminal-status"><span class="status-dot"></span> ssh</div>
+        </header>
 
-About:
-I am a full stack web developer with expertise in e-commerce integration projects and admin web app development. My primary focus is on backend development, but I also have experience with frontend technologies like React and Vue. Always eager to learn and improve my skills.
-</span>
+        <nav class="terminal-nav" aria-label="Portfolio sections">
+            <span class="terminal-nav__prompt" aria-hidden="true">quick commands:</span>
+            <a href="#about">whoami</a>
+            <a href="#experience">experience</a>
+            <a href="#skills">skills</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </nav>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">ls experience/</span>
-<span class="output">
-Oander_Development_Kft.txt  EPAM_Systems.txt  BCA_Hungary_Kft.txt  evosoft_Hungary_Kft.txt
-</span>
+        <main id="main-content" class="terminal-content">
+            <div class="session-banner" aria-label="Terminal session information">
+                <span>portfolio-shell 2.0.0</span>
+                <span>Type <strong>help</strong> to list available commands.</span>
+            </div>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat experience/*.txt</span>
-<span class="output">
-Senior Full Stack Developer at Oander Development Kft. (2022 - Present)
-- Developed and maintained e-commerce integration projects, focusing on backend development and API integrations.
-- Contributed to the development of admin web apps.
-- Built Claude-based agentic workflows for the Kotta platform to help the team plan, develop, audit, and test applications. Used MCPs, skills, and rules to standardize the workflows.
-- Used technologies, frameworks and services such as NodeJS, Typescript, Vue, TailwindCSS, MongoDB, Redis, Docker, Kubernetes, RabbitMQ, S3, EC2, Lambda, Go.
+            <section id="about" class="command-section hero" aria-labelledby="about-command">
+                <div class="command-line">
+                    <span class="prompt">mate@portfolio</span><span class="path">:~</span><span aria-hidden="true">$</span>
+                    <h1 id="about-command" class="command">cat about.json</h1>
+                </div>
 
-Software Engineer at EPAM Systems (2021 - 2022)
-- Developed and maintained a financial web application for international clients.
-- Used mainly React and Typescript, with CSS and SCSS for styling.
+                <div class="command-output hero-output">
+                    <div class="profile-wrap">
+                        <img src="assets/images/profile.png" alt="Mate Nemeth" class="profile-picture">
+                        <span class="profile-status"><span></span> backend systems</span>
+                    </div>
 
-Software Developer at BCA Hungary Kft. (2018 - 2021)
-- Developed and maintained an Orchestrator tool project for managing RPA robots
-- Developed and maintained enterprise resource planning (ERP) system project for internal usage.
-- Developed and maintained an online recommendation system project.
-- Used mainly JavaScript, Typescript, React, MongoDB, Redis, Docker, Kubernetes, Apache Kafka.
+                    <div class="identity">
+                        <p class="eyebrow">Hello, I'm</p>
+                        <h2>Mate Nemeth<span class="accent">.</span></h2>
+                        <p class="role">Senior Full Stack Developer</p>
+                        <p class="summary">I build reliable backend systems, e-commerce integrations, admin applications, and agentic developer workflows. I care about maintainable software, clear interfaces, and shipping systems that hold up in production.</p>
 
-Junior Software Engineer at evosoft Hungary Kft. (2017 - 2018)
-- Developed and maintained a factory automation software, using C#, XML and a device description language.
-</span>
+                        <dl class="identity-meta">
+                            <div><dt>location</dt><dd>Hungary</dd></div>
+                            <div><dt>focus</dt><dd>Backend &amp; integrations</dd></div>
+                            <div><dt>experience</dt><dd>9+ years</dd></div>
+                        </dl>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">tree skills/</span>
-<span class="output">
-skills/
-├── frontend/
-│   ├── HTML
-│   ├── CSS
-│   ├── JavaScript
-│   ├── React
-│   └── Vue
-└── backend/
-    ├── NodeJS
-    ├── Typescript
-    ├── MongoDB
-    ├── Redis
-    ├── Docker
-    ├── Kubernetes
-    ├── RabbitMQ
-    ├── Apache Kafka
-    ├── S3, EC2, Lambda
-    └── Go
-</span>
+                        <div class="hero-actions">
+                            <a class="terminal-action terminal-action--primary" href="assets/cv.pdf" target="_blank" rel="noopener">open cv.pdf <span>↗</span></a>
+                            <a class="terminal-action" href="https://github.com/therealnemethmate" target="_blank" rel="noopener">view github <span>↗</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">ls pet_projects/</span>
-<span class="output">
-homeflix  clash-of-babynames  fit-converter  imdb-sync-tool
-</span>
+            <section id="experience" class="command-section" aria-labelledby="experience-command">
+                <div class="command-line">
+                    <span class="prompt">mate@portfolio</span><span class="path">:~</span><span aria-hidden="true">$</span>
+                    <h2 id="experience-command" class="command">git log --experience</h2>
+                </div>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat pet_projects/*</span>
-<span class="output">
-Homeflix - Self hosted media server with a web interface
-<a href="https://github.com/therealnemethmate/homeflix" target="_blank">https://github.com/therealnemethmate/homeflix</a>
+                <div class="command-output timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"><span></span></div>
+                        <div class="timeline-heading">
+                            <div>
+                                <h3>Senior Full Stack Developer</h3>
+                                <p class="company">Oander Development Kft.</p>
+                            </div>
+                            <time datetime="2022">2022 — present</time>
+                        </div>
+                        <ul>
+                            <li>Develop and maintain e-commerce integrations, backend services, APIs, and admin applications.</li>
+                            <li>Built Claude-based agentic workflows for the Kotta platform to standardise planning, development, auditing, and testing.</li>
+                            <li>Designed and rolled out automated security and quality gates for Kotta applications to support CSA STAR Level 1 readiness and catch defects in AI-generated code.</li>
+                        </ul>
+                        <div class="tags" aria-label="Technologies used">
+                            <span>Node.js</span><span>TypeScript</span><span>Vue</span><span>Go</span><span>MongoDB</span><span>Redis</span><span>Kubernetes</span><span>AWS</span>
+                        </div>
+                    </article>
 
-Clash of Babynames - A web app to choose a hungarian baby name for your child
-<a href="https://github.com/therealnemethmate/clash-of-babynames" target="_blank">https://github.com/therealnemethmate/clash-of-babynames</a>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"><span></span></div>
+                        <div class="timeline-heading">
+                            <div>
+                                <h3>Software Engineer</h3>
+                                <p class="company">EPAM Systems</p>
+                            </div>
+                            <time datetime="2021">2021 — 2022</time>
+                        </div>
+                        <p>Developed and maintained a financial web application for international clients.</p>
+                        <div class="tags"><span>React</span><span>TypeScript</span><span>SCSS</span></div>
+                    </article>
 
-Fit Converter - A web app to convert .fit files for custom Zwift workouts
-<a href="https://github.com/therealnemethmate/fit-converter" target="_blank">https://github.com/therealnemethmate/fit-converter</a>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"><span></span></div>
+                        <div class="timeline-heading">
+                            <div>
+                                <h3>Software Developer</h3>
+                                <p class="company">BCA Hungary Kft.</p>
+                            </div>
+                            <time datetime="2018">2018 — 2021</time>
+                        </div>
+                        <p>Worked on RPA orchestration, internal ERP tooling, and an online recommendation platform.</p>
+                        <div class="tags"><span>TypeScript</span><span>React</span><span>MongoDB</span><span>Docker</span><span>Kafka</span></div>
+                    </article>
 
-IMDb Sync Tool - Node.js app to sync movie ratings from JSON to IMDb account
-<a href="https://github.com/therealnemethmate/imdb-sync-tool" target="_blank">https://github.com/therealnemethmate/imdb-sync-tool</a>
-</span>
+                    <article class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"><span></span></div>
+                        <div class="timeline-heading">
+                            <div>
+                                <h3>Junior Software Engineer</h3>
+                                <p class="company">evosoft Hungary Kft.</p>
+                            </div>
+                            <time datetime="2017">2017 — 2018</time>
+                        </div>
+                        <p>Developed factory automation software using C#, XML, and a device description language.</p>
+                    </article>
+                </div>
+            </section>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">cat connect.txt</span>
-<span class="output">
-GitHub: <a href="https://github.com/therealnemethmate" target="_blank">https://github.com/therealnemethmate</a>
-X: <a href="https://x.com/nemethmate" target="_blank">https://x.com/nemethmate</a>
-LinkedIn: <a href="https://www.linkedin.com/in/matenemeth91/" target="_blank">https://www.linkedin.com/in/matenemeth91/</a>
-</span>
+            <section id="skills" class="command-section" aria-labelledby="skills-command">
+                <div class="command-line">
+                    <span class="prompt">mate@portfolio</span><span class="path">:~</span><span aria-hidden="true">$</span>
+                    <h2 id="skills-command" class="command">tree ./skills --depth=2</h2>
+                </div>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command">wget assets/cv.pdf</span>
-<span class="output">
-Downloading CV... 100% complete
-File saved as: cv.pdf
-</span>
-<button class="download-btn" onclick="window.open('assets/cv.pdf', '_blank')">Open CV</button>
+                <div class="command-output skill-grid">
+                    <article class="skill-group">
+                        <p class="skill-path">./backend</p>
+                        <h3>Systems &amp; APIs</h3>
+                        <p>Node.js · TypeScript · Go · MongoDB · Redis · RabbitMQ · Apache Kafka</p>
+                    </article>
+                    <article class="skill-group">
+                        <p class="skill-path">./frontend</p>
+                        <h3>Web applications</h3>
+                        <p>Vue · React · JavaScript · HTML · CSS · Tailwind CSS</p>
+                    </article>
+                    <article class="skill-group">
+                        <p class="skill-path">./platform</p>
+                        <h3>Infrastructure</h3>
+                        <p>Docker · Kubernetes · AWS · S3 · EC2 · Lambda</p>
+                    </article>
+                    <article class="skill-group">
+                        <p class="skill-path">./tooling</p>
+                        <h3>Developer workflows</h3>
+                        <p>Agentic workflows · MCP · Claude · Skills · Rules</p>
+                    </article>
+                </div>
+            </section>
 
-<span class="prompt">root@mate-nemeth:~$</span> <span class="command blink">_</span>
-            </code></pre>
-        </div>
+            <section id="projects" class="command-section" aria-labelledby="projects-command">
+                <div class="command-line">
+                    <span class="prompt">mate@portfolio</span><span class="path">:~</span><span aria-hidden="true">$</span>
+                    <h2 id="projects-command" class="command">ls -la ./projects</h2>
+                </div>
+
+                <div class="command-output project-grid">
+                    <a class="project-card" href="https://github.com/therealnemethmate/homeflix" target="_blank" rel="noopener">
+                        <span class="project-index">01</span>
+                        <h3>homeflix<span>/</span></h3>
+                        <p>Self-hosted media server with a web interface.</p>
+                        <span class="project-link">github.com ↗</span>
+                    </a>
+                    <a class="project-card" href="https://github.com/therealnemethmate/clash-of-babynames" target="_blank" rel="noopener">
+                        <span class="project-index">02</span>
+                        <h3>clash-of-babynames<span>/</span></h3>
+                        <p>A web app for choosing a Hungarian baby name.</p>
+                        <span class="project-link">github.com ↗</span>
+                    </a>
+                    <a class="project-card" href="https://github.com/therealnemethmate/fit-converter" target="_blank" rel="noopener">
+                        <span class="project-index">03</span>
+                        <h3>fit-converter<span>/</span></h3>
+                        <p>Converts FIT files into custom Zwift workouts.</p>
+                        <span class="project-link">github.com ↗</span>
+                    </a>
+                    <a class="project-card" href="https://github.com/therealnemethmate/imdb-sync-tool" target="_blank" rel="noopener">
+                        <span class="project-index">04</span>
+                        <h3>imdb-sync-tool<span>/</span></h3>
+                        <p>Node.js tool for syncing movie ratings to IMDb.</p>
+                        <span class="project-link">github.com ↗</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact" class="command-section" aria-labelledby="contact-command">
+                <div class="command-line">
+                    <span class="prompt">mate@portfolio</span><span class="path">:~</span><span aria-hidden="true">$</span>
+                    <h2 id="contact-command" class="command">cat contact.md</h2>
+                </div>
+
+                <div class="command-output contact-panel">
+                    <div>
+                        <p class="contact-kicker">Let's build something useful.</p>
+                        <h3>Find me on the internet<span class="accent">_</span></h3>
+                    </div>
+                    <div class="contact-links">
+                        <a href="https://github.com/therealnemethmate" target="_blank" rel="noopener"><span>GitHub</span><span>↗</span></a>
+                        <a href="https://www.linkedin.com/in/matenemeth91/" target="_blank" rel="noopener"><span>LinkedIn</span><span>↗</span></a>
+                        <a href="https://x.com/nemethmate" target="_blank" rel="noopener"><span>X / Twitter</span><span>↗</span></a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <section class="interactive-shell" aria-label="Interactive command prompt">
+            <div id="command-response" class="command-response" aria-live="polite"></div>
+            <form id="command-form" autocomplete="off">
+                <label for="command-input" class="prompt">mate@portfolio<span class="path">:~</span>$</label>
+                <input id="command-input" name="command" type="text" inputmode="text" spellcheck="false" aria-describedby="command-hint" placeholder="type a command…" autocomplete="off">
+            </form>
+            <p id="command-hint" class="command-hint">help: commands · ↑↓: history · /: focus prompt</p>
+        </section>
     </div>
 </body>
 </html>
