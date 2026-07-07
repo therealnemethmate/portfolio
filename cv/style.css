@@ -1,0 +1,366 @@
+:root {
+    --ink: #17201b;
+    --muted: #5c665f;
+    --green: #086b33;
+    --green-dark: #064a25;
+    --green-soft: #e9f3ed;
+    --rule: #cdd8d1;
+    --paper: #ffffff;
+    --canvas: #e7ebe8;
+    --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    --mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 10pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+body {
+    padding: 12mm 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10mm;
+}
+
+.page {
+    position: relative;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm 16mm 13mm;
+    overflow: hidden;
+    background: var(--paper);
+    box-shadow: 0 2mm 8mm rgb(20 35 27 / 14%);
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3mm;
+    background: var(--green);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 7mm;
+}
+
+.profile-photo {
+    width: 27mm;
+    height: 27mm;
+    flex: 0 0 auto;
+    border: 1.5mm solid var(--green-soft);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-heading {
+    min-width: 0;
+}
+
+.eyebrow {
+    margin: 0 0 1mm;
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 7.4pt;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.5mm;
+    font-family: var(--mono);
+    font-size: 25pt;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.title {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 12pt;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 2mm 5mm;
+    margin: 6mm 0 0;
+    padding: 3.2mm 4mm;
+    border-left: 1.2mm solid var(--green);
+    background: var(--green-soft);
+    font-family: var(--mono);
+    font-size: 7.7pt;
+    font-style: normal;
+}
+
+.contact-list > *:nth-child(-n + 3) {
+    grid-column: span 2;
+}
+
+.contact-list > *:nth-child(n + 4) {
+    grid-column: span 3;
+}
+
+.contact-list a {
+    color: var(--green-dark);
+}
+
+.summary {
+    max-width: 169mm;
+    margin: 6mm 0 7mm;
+    color: #2b3530;
+    font-size: 10.2pt;
+    line-height: 1.5;
+}
+
+.cv-section {
+    margin-top: 7mm;
+}
+
+.cv-section > h2 {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    margin-bottom: 5mm;
+    font-family: var(--mono);
+    font-size: 13.5pt;
+    line-height: 1.1;
+}
+
+.cv-section > h2::before {
+    content: ">";
+    color: var(--green);
+    font-weight: 700;
+}
+
+.cv-section > h2::after {
+    content: "";
+    height: 0.35mm;
+    flex: 1;
+    background: var(--rule);
+}
+
+.role {
+    break-inside: avoid;
+    margin-bottom: 7mm;
+    padding-left: 4mm;
+    border-left: 0.45mm solid var(--rule);
+}
+
+.role--primary {
+    border-left-color: var(--green);
+}
+
+.role-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8mm;
+    align-items: start;
+    margin-bottom: 2.5mm;
+}
+
+.role h3,
+.projects h3 {
+    margin-bottom: 0.5mm;
+    font-family: var(--mono);
+    font-size: 10.7pt;
+    line-height: 1.25;
+}
+
+.company {
+    margin-bottom: 0;
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+.company span {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.role-meta {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 7.8pt;
+    line-height: 1.45;
+    text-align: right;
+    white-space: nowrap;
+}
+
+ul {
+    margin: 0;
+    padding-left: 5mm;
+}
+
+li {
+    margin-bottom: 1.5mm;
+    padding-left: 1mm;
+}
+
+li::marker {
+    color: var(--green);
+}
+
+.stack {
+    margin: 2.5mm 0 0;
+    color: var(--muted);
+    font-size: 8.4pt;
+}
+
+.stack strong {
+    color: var(--ink);
+    font-family: var(--mono);
+}
+
+.page-kicker {
+    display: flex;
+    justify-content: space-between;
+    margin: 1mm 0 7mm;
+    padding-bottom: 3mm;
+    border-bottom: 0.35mm solid var(--rule);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 8pt;
+}
+
+.page-kicker span:first-child {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.cv-section--continued {
+    margin-top: 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm 8mm;
+}
+
+.projects article {
+    break-inside: avoid;
+    padding-left: 3.5mm;
+    border-left: 0.8mm solid var(--green);
+}
+
+.projects h3 a {
+    color: var(--green-dark);
+}
+
+.projects h3 a::after {
+    content: " ↗";
+    color: var(--green);
+    font-size: 8pt;
+}
+
+.projects p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 8.7pt;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm 8mm;
+    margin: 0;
+}
+
+.skills div {
+    break-inside: avoid;
+}
+
+.skills dt {
+    margin-bottom: 0.8mm;
+    color: var(--green-dark);
+    font-family: var(--mono);
+    font-size: 8.7pt;
+    font-weight: 700;
+}
+
+.skills dd {
+    margin: 0;
+    color: #37413c;
+    font-size: 8.7pt;
+}
+
+.page-footer {
+    position: absolute;
+    right: 16mm;
+    bottom: 7mm;
+    left: 16mm;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5mm;
+    border-top: 0.3mm solid var(--rule);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 7.2pt;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        background: var(--paper);
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .document {
+        display: block;
+    }
+
+    .page {
+        min-height: 297mm;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+    }
+
+    .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+}
